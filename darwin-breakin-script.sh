@@ -1,9 +1,10 @@
 #!/bin/sh
-DSCL_DB="/Volumes/Macintosh HD/var/db/dslocal/nodes/Default"
+VOLUMETARGET="Macintosh HD"
 USERNAME="breakin"
 PASSWORD=$1
 USERID="101"
 GROUPID="20"
+DSCL_DB="/Volumes/$VOLUMETARGET/var/db/dslocal/nodes/Default"
 
 echo "Adding user account."
 dscl -f "$DSCL_DB" localonly -create /Local/Target/Users/$USERNAME
