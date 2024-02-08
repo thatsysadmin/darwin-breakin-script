@@ -1,11 +1,11 @@
 #!/bin/sh
-echo "Breakin' in."
 DSCL_DB="/Volumes/Macintosh HD/var/db/dslocal/nodes/Default"
 USERNAME="breakin"
 PASSWORD=$1
 USERID="101"
 GROUPID="20"
 
+echo "Adding user account."
 dscl -f "$DSCL_DB" localonly -create /Local/Target/Users/$USERNAME
 dscl -f "$DSCL_DB" localonly -create /Local/Target/Users/$USERNAME UserShell /bin/zsh
 dscl -f "$DSCL_DB" localonly -create /Local/Target/Users/$USERNAME RealName $USERNAME
