@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 DSCL_DB="/Volumes/Macintosh HD/var/db/dslocal/nodes/Default"
 USERNAME="breakin"
 PASSWORD=$1
